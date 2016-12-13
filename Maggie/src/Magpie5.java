@@ -1,3 +1,4 @@
+//**Tulsi Patel
 import java.util.Random;
 
 /**
@@ -21,7 +22,7 @@ public class Magpie5
 	 */	
 	public String getGreeting()
 	{
-		return "Hello, let's talk.";
+		return "Hey b.";
 	}
 	
 	/**
@@ -36,15 +37,15 @@ public class Magpie5
 		String response = "";
 		if (statement.length() == 0)
 		{
-			response = "Say something, please.";
+			response = "Use your loud mouth and say something.";
 		}
 
 		else if (findKeyword(statement, "no") >= 0)
 		{
 			response = "Damn! Chill b!";
 		}
-		else if (findKeyword(statement, "mother") >= 0
-				|| findKeyword(statement, "father") >= 0
+		else if (findKeyword(statement, "mom") >= 0
+				|| findKeyword(statement, "dad") >= 0
 				|| findKeyword(statement, "sister") >= 0
 				|| findKeyword(statement, "brother") >= 0)
 		{
@@ -64,7 +65,6 @@ public class Magpie5
 
 		else
 		{
-
 			// Look for a two word (you <something> me)
 			// pattern
 			int psn = findKeyword(statement, "you", 0);
@@ -281,14 +281,16 @@ public class Magpie5
 	}
 	
 	private String [] randomResponses = {"Lemme know more.",
-			"Hmmm.",
-			"You think so?",
-			"You don't say.",
+			"Mhmm.",
+			"Word?",
+			"No duh.",
 			//  All you need to do is add lines here
 			"Damn. Really?",
-			"Is it getting hot in here?",
+			"Why is it so stinking hot?",
 			"You wanna go for a walk?",
-			"I didn't hear you."
+			"Speak up. I can't hear you.",
+			"Oh wow. I don't care.",
+			"Cool story bro."
 	};
 	
 }
