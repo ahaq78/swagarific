@@ -292,7 +292,7 @@ public class Magpie5
 			"Oh wow. I don't care.",
 			"Cool story bro."
 	};
-	//connect to html to get sports stats
+	//Do sports stats
 	
 	
 	
