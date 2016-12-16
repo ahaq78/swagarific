@@ -55,7 +55,7 @@ public class Magpie2 {
 		else if(statement.indexOf ("bored")>= 0
 				||statement.indexOf ("hobby")>= 0)
 		{
-			response = "I like to not talk to you tbh";
+			response = "I like to not talk to you tbh"; 
 		}
 		else if(statement.indexOf ("goal")>= 0
 				||statement.indexOf ("idol")>= 0
