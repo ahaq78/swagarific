@@ -292,7 +292,7 @@ public class Magpie5
 			"Oh wow. I don't care.",
 			"Cool story bro."
 	};
-	//Do sports stats
+	//Do sports stats for NY teams (using html) only all others are rejected 
 	
 	
 	
