@@ -68,7 +68,7 @@ public class Magpie
 			||statement.indexOf ("celebrity")>= 0)
 			||statement.indexOf ("famous")>= 0
 		{
-			response = "Who's your favorite celeb?";
+			response = "Who's your favorite celeb?"; 
 		}
 		else if(statement.indexOf ("weekend")>= 0
 			||statement.indexOf ("plans")>= 0
