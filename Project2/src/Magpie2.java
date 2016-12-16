@@ -1,70 +1,73 @@
 
 public class Magpie2 {
-	/**
-	 * Get a default greeting 	
-	 * @return a greeting
-	 */
-	public String getGreeting()
-	{
-		return "Hello, let's talk.";
-	}
-	
-	/**
-	 * Gives a response to a user statement
-	 * 
-	 * @param statement
-	 *            the user statement
-	 * @return a response based on the rules given
-	 */
+
 	public String getResponse(String statement)
 	{
 		String response = "";
-		if (statement.indexOf("no") >= 0)
+		if (statement.indexOf ("baseball")>= 0
+			||statement.indexOf ("sport")>= 0
+			||statement.indexOf ("Yankees")>= 0
+			||statement.indexOf ("doing")>= 0
+			|| statement.indexOf ("ball")>= 0)
 		{
-			response = "Why so negative?";
+			response = "I know you can't play sports shutup";
 		}
-		else if (statement.indexOf("mother") >= 0
-				|| statement.indexOf("father") >= 0
-				|| statement.indexOf("sister") >= 0
-				|| statement.indexOf("brother") >= 0)
+		else if (statement.indexOf ("song")>= 0
+			||statement.indexOf ("music")>= 0
+			||statement.indexOf ("band")>= 0)
 		{
-			response = "Tell me more about your family.";
+			response = "You really wanna talk about music?";
 		}
-		else
+		else if (statement.indexOf ("TV")>= 0
+				||statement.indexOf ("episode")>= 0
+				||statement.indexOf ("show")>= 0
+				||statement.indexOf ("watch")>= 0)
 		{
-			response = getRandomResponse();
+			response = "You're dead boring my guy";
 		}
-		return response;
-	}
-
-	/**
-	 * Pick a default response to use if nothing else fits.
-	 * @return a non-committal string
-	 */
-	private String getRandomResponse()
-	{
-		final int NUMBER_OF_RESPONSES = 4;
-		double r = Math.random();
-		int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
-		String response = "";
+		else if(statement.indexOf ("cold")>= 0
+				||statement.indexOf ("hot")>= 0
+				||statement.indexOf ("sun")>= 0
+				||statement.indexOf ("cloud")>= 0)
+		{
+			response = "Timbs weather";
+		}
+		else if(statement.indexOf ("class")>= 0
+				||statement.indexOf ("school")>= 0)
+		{
+			response = "School a dub watchu talkin bout";
+		}
+		else if(statement.indexOf ("family")>= 0
+				||statement.indexOf ("mom")>= 0
+				||statement.indexOf ("dad")>= 0
+				||statement.indexOf ("ma")>= 0
+				||statement.indexOf ("pa")>= 0
+				||statement.indexOf ("brother")>= 0
+				||statement.indexOf ("sister")>= 0
+				||statement.indexOf ("cousin")>= 0)
+		{
+			response = "Hop off my life cuz";
+		}
+		else if(statement.indexOf ("home")>= 0)
+		{
+			response = "Your house";
+		}
+		else if(statement.indexOf ("bored")>= 0
+				||statement.indexOf ("hobby")>= 0)
+		{
+			response = "I like to not talk to you tbh";
+		}
+		else if(statement.indexOf ("goal")>= 0
+				||statement.indexOf ("idol")>= 0
+				||statement.indexOf ("mentor")>= 0
+				||statement.indexOf ("favorite")>= 0
+				||statement.indexOf ("celebrity")>= 0)
+		{
+			response = "My timbs";
+		}
 		
-		if (whichResponse == 0)
-		{
-			response = "Interesting, tell me more.";
-		}
-		else if (whichResponse == 1)
-		{
-			response = "Hmmm.";
-		}
-		else if (whichResponse == 2)
-		{
-			response = "Do you really think so?";
-		}
-		else if (whichResponse == 3)
-		{
-			response = "You don't say.";
-		}
-
 		return response;
 	}
+
 }
+
