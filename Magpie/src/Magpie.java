@@ -1,3 +1,10 @@
+/*Sadie Reuter
+ * Magpie Project
+ * Brooklyn Technical High School
+ * 12-10-16 */
+
+//This asks the user questions in response to some key words in their responses
+
 public class Magpie
 {
 	public String getResponse(String statement)
@@ -90,12 +97,12 @@ public class Magpie
 		{
 			response = "Got any pets?";
 		}
-			
-		/*else if(statement.indexOf ("")>= 0
-			||statement.indexOf ("")>=0)	
+		else if(statement.indexOf ("instrument")>= 0
+			||statement.indexOf ("play")>=0)	
 		{
-			response = "";
-		}*/		
+			response = "Do you play an instrument?";
+		}
+			
 		return response;
 	}
 }
