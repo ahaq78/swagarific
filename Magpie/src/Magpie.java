@@ -3,7 +3,7 @@
  * Brooklyn Technical High School
  * 12-10-16 */
 
-//This asks the user questions in response to some key words in their responses
+//This asks the user questions in response to some key words in their responses.
 
 public class Magpie
 {
