@@ -26,7 +26,7 @@ public class Magpie5
 	 */	
 	public String getGreeting()
 	{
-		
+		Jsoup.connection
 		return "Hey b.";
 	}
 	
