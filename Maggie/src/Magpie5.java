@@ -1,4 +1,6 @@
 //**Tulsi Patel
+
+import org.jsoup.Jsoup;
 import java.util.Random;
 
 /**
@@ -14,6 +16,8 @@ import java.util.Random;
  * @author Laurie White
  * @version April 2012
  */
+
+
 public class Magpie5
 {
 	/**
@@ -22,6 +26,7 @@ public class Magpie5
 	 */	
 	public String getGreeting()
 	{
+		
 		return "Hey b.";
 	}
 	
