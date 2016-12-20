@@ -1,6 +1,11 @@
 //**Tulsi Patel
 
 import org.jsoup.Jsoup;
+import org.jsoup.helper.Validate;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+import java.io.IOException;
 import java.util.Random;
 
 /**
@@ -26,7 +31,6 @@ public class Magpie5
 	 */	
 	public String getGreeting()
 	{
-		Jsoup.connection
 		return "Hey b.";
 	}
 	
@@ -121,8 +125,6 @@ public class Magpie5
 		String restOfStatement = statement.substring(psn + 9).trim();
 		return "What would it mean to " + restOfStatement + "?";
 	}
-
-	
 	/**
 	 * Take a statement with "I want <something>." and transform it into 
 	 * "Would you really be happy if you had <something>?"
@@ -144,7 +146,6 @@ public class Magpie5
 		String restOfStatement = statement.substring(psn + 6).trim();
 		return "Would you really be happy if you had " + restOfStatement + "?";
 	}
-	
 	/**
 	 * Take a statement with "you <something> me" and transform it into 
 	 * "What makes you think that I <something> you?"
@@ -194,9 +195,6 @@ public class Magpie5
 		String restOfStatement = statement.substring(psnOfI + 1, psnOfYou).trim();
 		return "Why do you " + restOfStatement + " me?";
 	}
-	
-
-	
 	
 	/**
 	 * Search for one word in phrase. The search is not case
@@ -261,7 +259,6 @@ public class Magpie5
 
 		return -1;
 	}
-	
 	/**
 	 * Search for one word in phrase.  The search is not case sensitive.
 	 * This method will check that the given goal is not a substring of a longer string
@@ -274,7 +271,6 @@ public class Magpie5
 	{
 		return findKeyword (statement, goal, 0);
 	}
-	
 	/**
 	 * Pick a default response to use if nothing else fits.
 	 * @return a non-committal string
@@ -284,7 +280,6 @@ public class Magpie5
 		Random r = new Random ();
 		return randomResponses [r.nextInt(randomResponses.length)];
 	}
-	
 	private String [] randomResponses = {"Lemme know more.",
 			"Mhmm.",
 			"Word?",
@@ -298,7 +293,50 @@ public class Magpie5
 			"Cool story bro."
 	};
 	//Do sports stats for NY teams (using html) only all others are rejected 
-	
-	
-	
 }
+public class ListLinks 
+{
+	 public static void main(String[] args) throws IOException {
+	        Validate.isTrue(args.length == 1, "usage: supply url to fetch");
+	        String url = args[0];
+	        print("Fetching %s...", url);
+
+	        Document doc = Jsoup.connect(url).get();
+	        Elements links = doc.select("a[href]");
+	        Elements media = doc.select("[src]");
+	        Elements imports = doc.select("link[href]");
+
+	        print("\nMedia: (%d)", media.size());
+	        for (Element src : media) {
+	            if (src.tagName().equals("img"))
+	                print(" * %s: <%s> %sx%s (%s)",
+	                        src.tagName(), src.attr("abs:src"), src.attr("width"), src.attr("height"),
+	                        trim(src.attr("alt"), 20));
+	            else
+	                print(" * %s: <%s>", src.tagName(), src.attr("abs:src"));
+	        }
+
+	        print("\nImports: (%d)", imports.size());
+	        for (Element link : imports) {
+	            print(" * %s <%s> (%s)", link.tagName(),link.attr("abs:href"), link.attr("rel"));
+	        }
+
+	        print("\nLinks: (%d)", links.size());
+	        for (Element link : links) {
+	            print(" * a: <%s>  (%s)", link.attr("abs:href"), trim(link.text(), 35));
+	        }
+	    }
+
+	    private static void print(String msg, Object... args) {
+	        System.out.println(String.format(msg, args));
+	    }
+
+	    private static String trim(String s, int width) {
+	        if (s.length() > width)
+	            return s.substring(0, width-1) + ".";
+	        else
+	            return s;
+	    }
+	}
+
+

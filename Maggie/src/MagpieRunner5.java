@@ -1,4 +1,11 @@
 import org.jsoup.Jsoup;
+import org.jsoup.Jsoup;
+import org.jsoup.helper.Validate;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+import java.io.IOException;
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -6,6 +13,7 @@ import java.util.Scanner;
  * @author Laurie White
  * @version April 2012
  */
+
 public class MagpieRunner5
 {
 
@@ -26,5 +34,5 @@ public class MagpieRunner5
 			statement = in.nextLine();
 		}
 	}
-
+	
 }
