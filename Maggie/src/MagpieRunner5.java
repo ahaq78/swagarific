@@ -1,10 +1,5 @@
-import org.jsoup.Jsoup;
-import org.jsoup.Jsoup;
-import org.jsoup.helper.Validate;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-import java.io.IOException;
+//**Tulsi Patel
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -34,5 +29,4 @@ public class MagpieRunner5
 			statement = in.nextLine();
 		}
 	}
-	
 }

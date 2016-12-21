@@ -294,7 +294,7 @@ public class Magpie5
 	};
 	//Do sports stats for NY teams (using html) only all others are rejected 
 }
-public class ListLinks 
+/**public class ListLinks 
 {
 	 public static void main(String[] args) throws IOException {
 	        Validate.isTrue(args.length == 1, "usage: supply url to fetch");
@@ -337,6 +337,6 @@ public class ListLinks
 	        else
 	            return s;
 	    }
-	}
+	    **/
 
-
+}
