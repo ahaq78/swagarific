@@ -64,16 +64,16 @@ public class Magpie
 			response = "Where you from?";
 		}
 		else if(statement.indexOf ("bored")>= 0
-			||statement.indexOf ("hobby")>= 0)
-			||statement.indexOf ("lazy")>= 0
+			||statement.indexOf ("hobby")>= 0
+			||statement.indexOf ("lazy")>= 0)
 		{
 			response = "What you like to do?";
 		}
 		else if(statement.indexOf ("goal")>= 0
 			||statement.indexOf ("idol")>= 0
 			||statement.indexOf ("mentor")>= 0
-			||statement.indexOf ("celebrity")>= 0)
-			||statement.indexOf ("famous")>= 0
+			||statement.indexOf ("celebrity")>= 0
+			||statement.indexOf ("famous")>= 0)
 		{
 			response = "Who's your favorite celeb?"; 
 		}
