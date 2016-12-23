@@ -1,5 +1,6 @@
 //**Tulsi Patel
 
+import java.io.IOException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -14,12 +15,15 @@ public class MagpieRunner5
 
 	/**
 	 * Create a Magpie, give it user input, and print its replies.
+	 * @throws Exception 
 	 */
-	public static void main(String[] args)
+	public static void main(String[] args) throws Exception
 	{
 		Magpie5 maggie = new Magpie5();
 		
 		System.out.println (maggie.getGreeting());
+		System.out.println(Magpie5.connect(null));
+		
 		Scanner in = new Scanner (System.in);
 		String statement = in.nextLine();
 		
